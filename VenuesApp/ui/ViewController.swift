@@ -9,8 +9,14 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var callServiceBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func callServiceClick() {
         let venueViewModel = VenueViewModel()
         venueViewModel.getVenues()
     }
