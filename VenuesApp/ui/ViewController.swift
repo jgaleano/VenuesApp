@@ -25,6 +25,14 @@ class ViewController: UIViewController {
     @IBAction func callServiceClick() {
         venueViewModel.getVenues()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MapViewController {
+            let mvc = segue.destination as? MapViewController
+            mvc?.listVenues = venueViewModel.listVenues.value ?? []
+            mvc?.currentLocation = venueViewModel.currentLocation
+        }
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {

@@ -93,11 +93,18 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="O95-O0-EJh">
-                        <barButtonItem key="rightBarButtonItem" title="Call Service" id="RUJ-qo-xTN">
-                            <connections>
-                                <action selector="callServiceClick" destination="BYZ-38-t0r" id="TnP-1O-y7V"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Call Service" id="RUJ-qo-xTN">
+                                <connections>
+                                    <action selector="callServiceClick" destination="BYZ-38-t0r" id="g4V-Sv-mKw"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Map View" id="xOT-4V-mI0">
+                                <connections>
+                                    <segue destination="rJT-uH-bcZ" kind="show" id="HxB-Jq-gBg"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="VtD-HK-HBm" id="P8c-wz-bX1"/>
@@ -106,6 +113,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="685.90704647676171"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="eb4-2j-amo">
+            <objects>
+                <viewController id="rJT-uH-bcZ" customClass="MapViewController" customModule="VenuesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gWW-8H-hAV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uw2-wc-IMU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nBM-wf-9qA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1548" y="683"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mg3-dW-0eD">

@@ -19,6 +19,7 @@
 		476D0D2721FA1718003BEBBD /* GPSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2621FA1718003BEBBD /* GPSManager.swift */; };
 		476D0D2921FA1804003BEBBD /* BoxBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2821FA1804003BEBBD /* BoxBinding.swift */; };
 		476D0D2B21FA2FFD003BEBBD /* VenueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2A21FA2FFD003BEBBD /* VenueViewCell.swift */; };
+		476D0D2D21FA5235003BEBBD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2C21FA5235003BEBBD /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		476D0D2621FA1718003BEBBD /* GPSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSManager.swift; sourceTree = "<group>"; };
 		476D0D2821FA1804003BEBBD /* BoxBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBinding.swift; sourceTree = "<group>"; };
 		476D0D2A21FA2FFD003BEBBD /* VenueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewCell.swift; sourceTree = "<group>"; };
+		476D0D2C21FA5235003BEBBD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		856F2052FE10A7776C2E2B8B /* Pods-VenuesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenuesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VenuesApp/Pods-VenuesApp.release.xcconfig"; sourceTree = "<group>"; };
 		E7AE09C016735FE50531199E /* Pods-VenuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenuesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VenuesApp/Pods-VenuesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,9 +97,10 @@
 			isa = PBXGroup;
 			children = (
 				476D0D0B21FA04FA003BEBBD /* ViewController.swift */,
+				476D0D2A21FA2FFD003BEBBD /* VenueViewCell.swift */,
+				476D0D2C21FA5235003BEBBD /* MapViewController.swift */,
 				476D0D0D21FA04FA003BEBBD /* Main.storyboard */,
 				476D0D1221FA0516003BEBBD /* LaunchScreen.storyboard */,
-				476D0D2A21FA2FFD003BEBBD /* VenueViewCell.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				476D0D2021FA0BF6003BEBBD /* VenueApiManager.swift in Sources */,
 				476D0D2421FA0F1C003BEBBD /* VenueViewModel.swift in Sources */,
 				476D0D2221FA0D1E003BEBBD /* VenueApiResponse.swift in Sources */,
+				476D0D2D21FA5235003BEBBD /* MapViewController.swift in Sources */,
 				476D0D2B21FA2FFD003BEBBD /* VenueViewCell.swift in Sources */,
 				476D0D0C21FA04FA003BEBBD /* ViewController.swift in Sources */,
 				476D0D2721FA1718003BEBBD /* GPSManager.swift in Sources */,

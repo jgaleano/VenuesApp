@@ -15,6 +15,9 @@ class VenueViewModel: NSObject {
     
     private var venueApiManager:VenueApiManager?
     private var gpsManager: GPSManager
+    var currentLocation: CLLocationCoordinate2D {
+        return gpsManager.currentLocation.value!
+    }
     
     override init() {
         venueApiManager = VenueApiManager.sharedInstance
