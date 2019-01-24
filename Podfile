@@ -6,5 +6,6 @@ target 'VenuesApp' do
   use_frameworks!
 
   # Pods for VenuesApp
+  pod 'Alamofire', '~> 4.0'
 
 end

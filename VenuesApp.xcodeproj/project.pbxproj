@@ -13,6 +13,9 @@
 		476D0D0F21FA04FA003BEBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476D0D0D21FA04FA003BEBBD /* Main.storyboard */; };
 		476D0D1121FA0516003BEBBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 476D0D1021FA0516003BEBBD /* Assets.xcassets */; };
 		476D0D1421FA0516003BEBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476D0D1221FA0516003BEBBD /* LaunchScreen.storyboard */; };
+		476D0D2021FA0BF6003BEBBD /* VenueApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D1F21FA0BF6003BEBBD /* VenueApiManager.swift */; };
+		476D0D2221FA0D1E003BEBBD /* VenueApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2121FA0D1E003BEBBD /* VenueApiResponse.swift */; };
+		476D0D2421FA0F1C003BEBBD /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2321FA0F1C003BEBBD /* VenueViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		476D0D1021FA0516003BEBBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		476D0D1321FA0516003BEBBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		476D0D1521FA0516003BEBBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		476D0D1F21FA0BF6003BEBBD /* VenueApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueApiManager.swift; sourceTree = "<group>"; };
+		476D0D2121FA0D1E003BEBBD /* VenueApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueApiResponse.swift; sourceTree = "<group>"; };
+		476D0D2321FA0F1C003BEBBD /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
 		856F2052FE10A7776C2E2B8B /* Pods-VenuesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenuesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VenuesApp/Pods-VenuesApp.release.xcconfig"; sourceTree = "<group>"; };
 		E7AE09C016735FE50531199E /* Pods-VenuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VenuesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VenuesApp/Pods-VenuesApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,14 +75,49 @@
 		476D0D0821FA04F9003BEBBD /* VenuesApp */ = {
 			isa = PBXGroup;
 			children = (
+				476D0D1D21FA0AE4003BEBBD /* data */,
+				476D0D1B21FA0AB8003BEBBD /* ui */,
 				476D0D0921FA04F9003BEBBD /* AppDelegate.swift */,
-				476D0D0B21FA04FA003BEBBD /* ViewController.swift */,
-				476D0D0D21FA04FA003BEBBD /* Main.storyboard */,
 				476D0D1021FA0516003BEBBD /* Assets.xcassets */,
-				476D0D1221FA0516003BEBBD /* LaunchScreen.storyboard */,
 				476D0D1521FA0516003BEBBD /* Info.plist */,
 			);
 			path = VenuesApp;
+			sourceTree = "<group>";
+		};
+		476D0D1B21FA0AB8003BEBBD /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				476D0D0B21FA04FA003BEBBD /* ViewController.swift */,
+				476D0D0D21FA04FA003BEBBD /* Main.storyboard */,
+				476D0D1221FA0516003BEBBD /* LaunchScreen.storyboard */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		476D0D1C21FA0AC7003BEBBD /* services */ = {
+			isa = PBXGroup;
+			children = (
+				476D0D1F21FA0BF6003BEBBD /* VenueApiManager.swift */,
+			);
+			path = services;
+			sourceTree = "<group>";
+		};
+		476D0D1D21FA0AE4003BEBBD /* data */ = {
+			isa = PBXGroup;
+			children = (
+				476D0D1E21FA0B28003BEBBD /* business_logic */,
+				476D0D1C21FA0AC7003BEBBD /* services */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		476D0D1E21FA0B28003BEBBD /* business_logic */ = {
+			isa = PBXGroup;
+			children = (
+				476D0D2121FA0D1E003BEBBD /* VenueApiResponse.swift */,
+				476D0D2321FA0F1C003BEBBD /* VenueViewModel.swift */,
+			);
+			path = business_logic;
 			sourceTree = "<group>";
 		};
 		A137C04C19ABFD9026649CAA /* Pods */ = {
@@ -210,6 +251,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476D0D2021FA0BF6003BEBBD /* VenueApiManager.swift in Sources */,
+				476D0D2421FA0F1C003BEBBD /* VenueViewModel.swift in Sources */,
+				476D0D2221FA0D1E003BEBBD /* VenueApiResponse.swift in Sources */,
 				476D0D0C21FA04FA003BEBBD /* ViewController.swift in Sources */,
 				476D0D0A21FA04F9003BEBBD /* AppDelegate.swift in Sources */,
 			);
@@ -360,7 +404,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VenuesApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.julio.ios.VenuesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -375,7 +422,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = VenuesApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = co.julio.ios.VenuesApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
