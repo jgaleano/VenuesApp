@@ -11,7 +11,7 @@ import CoreLocation
 
 class VenueViewModel: NSObject {
     
-    var listVenues: BoxBinding<[Venue]?> = BoxBinding([])
+    var listVenues: BoxBinding<[VenueItemViewModel]?> = BoxBinding([])
     
     private var venueApiManager:VenueApiManager?
     private var gpsManager: GPSManager
@@ -37,9 +37,8 @@ extension VenueViewModel {
     
     func getVenuesFromService(gpsLatitude: Double, gpsLongitude: Double) {
         venueApiManager?.searchVenuesByLocation(gpsLatitude: gpsLatitude, gpsLongitude: gpsLongitude, onSuccess: { venues in
-            var venuesMod = venues;
-            self.calculateDistance(venues: &venuesMod);
-            venuesMod.sort(by: {$0.location.distanceCalculated! < $1.location.distanceCalculated!})
+            var venuesMod = self.calculateDistanceAndTransformToViewObject(venues: venues)
+            venuesMod.sort(by: {$0.distanceCalculated < $1.distanceCalculated})
             self.listVenues.value = venuesMod
         }, onFailure: { error in
             print(error.localizedDescription)
@@ -48,11 +47,13 @@ extension VenueViewModel {
 }
 
 private extension VenueViewModel {
-    func calculateDistance(venues: inout [Venue]) {
+    func calculateDistanceAndTransformToViewObject(venues: [Venue]) -> [VenueItemViewModel] {
+        var venuesView: [VenueItemViewModel] = []
         let currentLocation = CLLocation(latitude: gpsManager.currentLocation.value?.latitude ?? 0, longitude: gpsManager.currentLocation.value?.longitude ?? 0);
         for index in 0..<venues.count {
-            let venueLocation = CLLocation(latitude: venues[index].location.lat, longitude: venues[index].location.lng)
-            venues[index].location.distanceCalculated = currentLocation.distance(from: venueLocation);
+            let venueLocation = CLLocation(latitude: ((venues[index].location?.gpsLatitude)!), longitude: (venues[index].location?.gpsLongitude)!)
+            venuesView.append(VenueItemViewModel(venueSourceObj: venues[index], distanceCalculated: currentLocation.distance(from: venueLocation)))
         }
+        return venuesView
     }
 }

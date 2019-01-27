@@ -17,13 +17,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         venueViewModel.listVenues.bind { [unowned self] in
-            print($0!)
+            let _ = $0!
             self.tableView.reloadData()
         }
     }
     
     @IBAction func callServiceClick() {
         venueViewModel.getVenues()
+    }
+    
+    @IBAction func photosClick() {
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -49,7 +53,15 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let venue = venueViewModel.listVenues.value?[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueViewCell") as! VenueViewCell
         cell.setVenue(venueObj: venue!)
+        
+        //Download image
+        if venue?.venueImage.value == nil {
+            cell.venueImage.image = UIImage(named: "FoursquareLogo")!
+            venue?.downloadVenueImage(venueSourceObj: venue!.venueSourceObj!)
+        }
+        else {
+            cell.venueImage.image = venue?.venueImage.value
+        }
         return cell
     }
 }
-
