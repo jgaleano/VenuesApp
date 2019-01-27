@@ -37,23 +37,19 @@ extension VenueViewModel {
     
     func getVenuesFromService(gpsLatitude: Double, gpsLongitude: Double) {
         venueApiManager?.searchVenuesByLocation(gpsLatitude: gpsLatitude, gpsLongitude: gpsLongitude, onSuccess: { venues in
-            var venuesMod = self.calculateDistanceAndTransformToViewObject(venues: venues)
-            venuesMod.sort(by: {$0.distanceCalculated < $1.distanceCalculated})
-            self.listVenues.value = venuesMod
+            
+            let locationCalculations = LocationCalculations();
+            var venuesView: [VenueItemViewModel] = []
+            let currentLocation = CLLocation(latitude: self.gpsManager.currentLocation.value?.latitude ?? 0, longitude: self.gpsManager.currentLocation.value?.longitude ?? 0)
+            for index in 0..<venues.count {
+                let venueLocation = CLLocation(latitude: ((venues[index].location?.gpsLatitude)!), longitude: (venues[index].location?.gpsLongitude)!)
+                let distanceCalculated = locationCalculations.calculateDistanceFromLocationPoints(currentLocation: currentLocation, venueLocation: venueLocation)
+                venuesView.append(VenueItemViewModel(venueSourceObj: venues[index], distanceCalculated: distanceCalculated))
+            }
+            venuesView.sort(by: {$0.distanceCalculated < $1.distanceCalculated})
+            self.listVenues.value = venuesView
         }, onFailure: { error in
             print(error.localizedDescription)
         })
-    }
-}
-
-private extension VenueViewModel {
-    func calculateDistanceAndTransformToViewObject(venues: [Venue]) -> [VenueItemViewModel] {
-        var venuesView: [VenueItemViewModel] = []
-        let currentLocation = CLLocation(latitude: gpsManager.currentLocation.value?.latitude ?? 0, longitude: gpsManager.currentLocation.value?.longitude ?? 0);
-        for index in 0..<venues.count {
-            let venueLocation = CLLocation(latitude: ((venues[index].location?.gpsLatitude)!), longitude: (venues[index].location?.gpsLongitude)!)
-            venuesView.append(VenueItemViewModel(venueSourceObj: venues[index], distanceCalculated: currentLocation.distance(from: venueLocation)))
-        }
-        return venuesView
     }
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct Location: Decodable {
+struct VenueLocationApiObj: Decodable {
     var gpsLatitude: Double?
     var gpsLongitude: Double?
     var address: String?

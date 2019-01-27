@@ -23,10 +23,13 @@ class VenueApiManager: NSObject {
     static let sharedInstance = VenueApiManager()
 }
 
+typealias VenueSucccessClosure = ([VenueApiObj]) -> Void
+typealias ErrorClosure = (Error) -> Void
+typealias ImageSuccessClosure = (UIImage) -> Void
 extension VenueApiManager {
-    func searchVenuesByLocation(gpsLatitude: Double, gpsLongitude: Double, onSuccess: @escaping([Venue]) -> Void, onFailure: @escaping(Error)->Void) -> Void {
+    func searchVenuesByLocation(gpsLatitude: Double, gpsLongitude: Double, onSuccess: @escaping(VenueSucccessClosure), onFailure: @escaping(ErrorClosure)) -> Void {
         
-        let url : String = baseURL + searchPath + String(gpsLatitude) + "," + String(gpsLongitude) + authenticationURL
+        let url : String = String("\(baseURL)\(searchPath)\(String(gpsLatitude)),\(String(gpsLongitude))\(authenticationURL)")
         print("URL request: \(url)")
         
         Alamofire.request(url).validate(statusCode:200..<300).responseJSON { response in
@@ -35,7 +38,7 @@ extension VenueApiManager {
                 let responseData = response.data
                 let decoder = JSONDecoder()
                 do {
-                    let jsonResponse = try decoder.decode(Venues.self, from: responseData!)
+                    let jsonResponse = try decoder.decode(VenuesApiObj.self, from: responseData!)
                     onSuccess(jsonResponse.venues!)
                 }
                 catch {
@@ -48,7 +51,7 @@ extension VenueApiManager {
         }
     }
     
-    func downloadImageFromVenue(venue: Venue, onSuccess: @escaping(UIImage) -> Void, onFailure: @escaping(Error)->Void) -> Void {
+    func downloadImageFromVenue(venue: VenueApiObj, onSuccess: @escaping(ImageSuccessClosure), onFailure: @escaping(Error)->Void) -> Void {
         let url : String = baseURL + venue.id! + photosPath + authenticationURL
         print("URL request: \(url)")
         

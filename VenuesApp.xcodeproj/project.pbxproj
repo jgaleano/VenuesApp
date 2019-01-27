@@ -11,6 +11,7 @@
 		472EF59D21FCE410000E4833 /* VenueItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472EF59C21FCE410000E4833 /* VenueItemViewModel.swift */; };
 		472EF5A321FD3BCC000E4833 /* VenueApiObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472EF5A221FD3BCC000E4833 /* VenueApiObj.swift */; };
 		472EF5A521FD3BFA000E4833 /* VenueLocationApiObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472EF5A421FD3BFA000E4833 /* VenueLocationApiObj.swift */; };
+		472EF5A921FD4C97000E4833 /* LocationCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472EF5A821FD4C97000E4833 /* LocationCalculations.swift */; };
 		476D0D0A21FA04F9003BEBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D0921FA04F9003BEBBD /* AppDelegate.swift */; };
 		476D0D0C21FA04FA003BEBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D0B21FA04FA003BEBBD /* ViewController.swift */; };
 		476D0D0F21FA04FA003BEBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476D0D0D21FA04FA003BEBBD /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		476D0D2021FA0BF6003BEBBD /* VenueApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D1F21FA0BF6003BEBBD /* VenueApiManager.swift */; };
 		476D0D2221FA0D1E003BEBBD /* VenuesApiObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2121FA0D1E003BEBBD /* VenuesApiObj.swift */; };
 		476D0D2421FA0F1C003BEBBD /* VenueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2321FA0F1C003BEBBD /* VenueViewModel.swift */; };
-		476D0D2721FA1718003BEBBD /* GPSManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2621FA1718003BEBBD /* GPSManager.swift */; };
+		476D0D2721FA1718003BEBBD /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2621FA1718003BEBBD /* LocationManager.swift */; };
 		476D0D2921FA1804003BEBBD /* BoxBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2821FA1804003BEBBD /* BoxBinding.swift */; };
 		476D0D2B21FA2FFD003BEBBD /* VenueViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2A21FA2FFD003BEBBD /* VenueViewCell.swift */; };
 		476D0D2D21FA5235003BEBBD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D2C21FA5235003BEBBD /* MapViewController.swift */; };
@@ -30,6 +31,7 @@
 		472EF59C21FCE410000E4833 /* VenueItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueItemViewModel.swift; sourceTree = "<group>"; };
 		472EF5A221FD3BCC000E4833 /* VenueApiObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueApiObj.swift; sourceTree = "<group>"; };
 		472EF5A421FD3BFA000E4833 /* VenueLocationApiObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueLocationApiObj.swift; sourceTree = "<group>"; };
+		472EF5A821FD4C97000E4833 /* LocationCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCalculations.swift; sourceTree = "<group>"; };
 		476D0D0621FA04F9003BEBBD /* VenuesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenuesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476D0D0921FA04F9003BEBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		476D0D0B21FA04FA003BEBBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		476D0D1F21FA0BF6003BEBBD /* VenueApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueApiManager.swift; sourceTree = "<group>"; };
 		476D0D2121FA0D1E003BEBBD /* VenuesApiObj.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesApiObj.swift; sourceTree = "<group>"; };
 		476D0D2321FA0F1C003BEBBD /* VenueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewModel.swift; sourceTree = "<group>"; };
-		476D0D2621FA1718003BEBBD /* GPSManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPSManager.swift; sourceTree = "<group>"; };
+		476D0D2621FA1718003BEBBD /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		476D0D2821FA1804003BEBBD /* BoxBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBinding.swift; sourceTree = "<group>"; };
 		476D0D2A21FA2FFD003BEBBD /* VenueViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewCell.swift; sourceTree = "<group>"; };
 		476D0D2C21FA5235003BEBBD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -151,8 +153,9 @@
 		476D0D2521FA16E1003BEBBD /* util */ = {
 			isa = PBXGroup;
 			children = (
-				476D0D2621FA1718003BEBBD /* GPSManager.swift */,
+				476D0D2621FA1718003BEBBD /* LocationManager.swift */,
 				476D0D2821FA1804003BEBBD /* BoxBinding.swift */,
+				472EF5A821FD4C97000E4833 /* LocationCalculations.swift */,
 			);
 			path = util;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				472EF59D21FCE410000E4833 /* VenueItemViewModel.swift in Sources */,
+				472EF5A921FD4C97000E4833 /* LocationCalculations.swift in Sources */,
 				476D0D2921FA1804003BEBBD /* BoxBinding.swift in Sources */,
 				476D0D2021FA0BF6003BEBBD /* VenueApiManager.swift in Sources */,
 				476D0D2421FA0F1C003BEBBD /* VenueViewModel.swift in Sources */,
@@ -298,7 +302,7 @@
 				476D0D2B21FA2FFD003BEBBD /* VenueViewCell.swift in Sources */,
 				476D0D0C21FA04FA003BEBBD /* ViewController.swift in Sources */,
 				472EF5A521FD3BFA000E4833 /* VenueLocationApiObj.swift in Sources */,
-				476D0D2721FA1718003BEBBD /* GPSManager.swift in Sources */,
+				476D0D2721FA1718003BEBBD /* LocationManager.swift in Sources */,
 				476D0D0A21FA04F9003BEBBD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

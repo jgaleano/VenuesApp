@@ -11,14 +11,14 @@ import UIKit
 class VenueItemViewModel: NSObject {
     
     //Obj
-    var venueSourceObj: Venue?
+    var venueSourceObj: VenueApiObj?
     var venueImage: BoxBinding<UIImage?> = BoxBinding(nil)
     var distanceCalculated: Double
     
     //ViewModel
-    private var venueApiManager:VenueApiManager?
+    private let venueApiManager:VenueApiManager
     
-    init(venueSourceObj: Venue!, distanceCalculated: Double) {
+    init(venueSourceObj: VenueApiObj!, distanceCalculated: Double) {
         venueApiManager = VenueApiManager.sharedInstance
         self.venueSourceObj = venueSourceObj
         self.distanceCalculated = distanceCalculated
@@ -26,8 +26,8 @@ class VenueItemViewModel: NSObject {
 }
 
 extension VenueItemViewModel {
-    func downloadVenueImage(venueSourceObj: Venue) -> Void {
-        venueApiManager!.downloadImageFromVenue(venue: venueSourceObj,  onSuccess: { cellImage in
+    func downloadVenueImage(venueSourceObj: VenueApiObj) -> Void {
+        venueApiManager.downloadImageFromVenue(venue: venueSourceObj,  onSuccess: { cellImage in
             DispatchQueue.main.async {
                 print("CELL IMAGE LOADED SUCCESS")
                 self.venueImage.value = cellImage

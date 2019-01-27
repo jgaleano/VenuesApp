@@ -8,11 +8,10 @@
 
 import UIKit
 
-struct Venue: Decodable {
+struct VenueApiObj: Decodable {
     var id: String?
     var name: String?
-    var location: Location?
-    var photoUrl: String?
+    var location: VenueLocationApiObj?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -24,6 +23,6 @@ struct Venue: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         name = try? container.decode(String.self, forKey: .name)
         id = try? container.decode(String.self, forKey: .id)
-        location = try? container.decode(Location.self, forKey: .location)
+        location = try? container.decode(VenueLocationApiObj.self, forKey: .location)
     }
 }
