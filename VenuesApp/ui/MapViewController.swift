@@ -17,7 +17,7 @@ class MapViewController: ViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let camera = GMSCameraPosition.camera(withLatitude: Double(self.currentLocation?.latitude ?? 0), longitude: Double(self.currentLocation?.longitude ?? 0), zoom: 18.0)
+        let camera = GMSCameraPosition.camera(withLatitude: Double(self.currentLocation?.latitude ?? 0), longitude: Double(self.currentLocation?.longitude ?? 0), zoom: 19.0)
         let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
         view = mapView
@@ -33,7 +33,6 @@ extension MapViewController {
             markerSquirt.title = venue.venueSourceObj!.name
             markerSquirt.snippet = venue.venueSourceObj!.location?.address
             markerSquirt.map = mapView
-            //markerSquirt.icon = UIImage(named: "007 Squirtle")
         }
     }
 }

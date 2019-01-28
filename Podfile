@@ -7,8 +7,6 @@ target 'VenuesApp' do
 
   # Pods for VenuesApp
   pod 'Alamofire'
-  #pod 'AlamofireImage', '~> 3'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
-
 end

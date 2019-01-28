@@ -39,10 +39,14 @@ class ViewController: UIViewController {
     }
 }
 
+struct TableViewConstants {
+    static let rowHight = 88
+}
+
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 88;
+        return CGFloat(TableViewConstants.rowHight);
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,7 +58,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VenueViewCell") as! VenueViewCell
         cell.setVenue(venueObj: venue!)
         
-        //Download image
         if venue?.venueImage.value == nil {
             cell.venueImage.image = UIImage(named: "FoursquareLogo")!
             venue?.downloadVenueImage(venueSourceObj: venue!.venueSourceObj!)

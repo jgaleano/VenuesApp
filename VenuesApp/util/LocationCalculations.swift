@@ -13,6 +13,7 @@ class LocationCalculations {
 
 extension LocationCalculations {
     func calculateDistanceFromLocationPoints(currentLocation: CLLocation, venueLocation: CLLocation) -> Double {
-        return currentLocation.distance(from: venueLocation)
+        let distance = currentLocation.distance(from: venueLocation)
+        return (distance*100).rounded()/100
     }
 }

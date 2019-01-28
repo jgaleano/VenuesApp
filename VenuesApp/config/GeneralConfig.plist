@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>clientId</key>
+	<string>2LOOZAAWUUZHO2VJFLXRBE43DVYJEV4LD2W3KNHBQD13R51K</string>
+	<key>clientSecret</key>
+	<string>OOQX0TPP1KSTCPGUJTOZGZCJNDOVTGQ0DYZ1RK5GBNF01HB1</string>
+	<key>versionDate</key>
+	<string>20190128</string>
+	<key>googleServices</key>
+	<string>AIzaSyC2ilftX2hbV2g_QRHhSOVDatzhN0m-8FI</string>
+</dict>
+</plist>
