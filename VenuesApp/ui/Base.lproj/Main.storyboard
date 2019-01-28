@@ -93,11 +93,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="O95-O0-EJh">
-                        <barButtonItem key="leftBarButtonItem" title="Photos" id="sov-Df-6Ck">
-                            <connections>
-                                <action selector="photosClick" destination="BYZ-38-t0r" id="KNv-bO-zZk"/>
-                            </connections>
-                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem title="Call Service" id="RUJ-qo-xTN">
                                 <connections>
