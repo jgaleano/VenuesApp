@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27C6613A9F2EF2552D1429FC /* Pods_VenuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04708BA44BE652C2CD17C001 /* Pods_VenuesApp.framework */; };
 		434ACA6A245B9209000954C5 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ACA69245B9209000954C5 /* ViewModel.swift */; };
+		434ACA80245B9BB6000954C5 /* VenuesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434ACA7F245B9BB6000954C5 /* VenuesAppTests.swift */; };
 		476D0D0A21FA04F9003BEBBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D0921FA04F9003BEBBD /* AppDelegate.swift */; };
 		476D0D0C21FA04FA003BEBBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476D0D0B21FA04FA003BEBBD /* ViewController.swift */; };
 		476D0D0F21FA04FA003BEBBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476D0D0D21FA04FA003BEBBD /* Main.storyboard */; };
@@ -16,9 +17,22 @@
 		476D0D1421FA0516003BEBBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 476D0D1221FA0516003BEBBD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		434ACA82245B9BB6000954C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 476D0CFE21FA04F9003BEBBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 476D0D0521FA04F9003BEBBD;
+			remoteInfo = VenuesApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		04708BA44BE652C2CD17C001 /* Pods_VenuesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VenuesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		434ACA69245B9209000954C5 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		434ACA7D245B9BB6000954C5 /* VenuesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VenuesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		434ACA7F245B9BB6000954C5 /* VenuesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenuesAppTests.swift; sourceTree = "<group>"; };
+		434ACA81245B9BB6000954C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		476D0D0621FA04F9003BEBBD /* VenuesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VenuesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476D0D0921FA04F9003BEBBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		476D0D0B21FA04FA003BEBBD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		434ACA7A245B9BB6000954C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		476D0D0321FA04F9003BEBBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -58,10 +79,20 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		434ACA7E245B9BB6000954C5 /* VenuesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				434ACA7F245B9BB6000954C5 /* VenuesAppTests.swift */,
+				434ACA81245B9BB6000954C5 /* Info.plist */,
+			);
+			path = VenuesAppTests;
+			sourceTree = "<group>";
+		};
 		476D0CFD21FA04F9003BEBBD = {
 			isa = PBXGroup;
 			children = (
 				476D0D0821FA04F9003BEBBD /* VenuesApp */,
+				434ACA7E245B9BB6000954C5 /* VenuesAppTests */,
 				476D0D0721FA04F9003BEBBD /* Products */,
 				A137C04C19ABFD9026649CAA /* Pods */,
 				25E7164090E290CB03824CF7 /* Frameworks */,
@@ -72,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				476D0D0621FA04F9003BEBBD /* VenuesApp.app */,
+				434ACA7D245B9BB6000954C5 /* VenuesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +134,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		434ACA7C245B9BB6000954C5 /* VenuesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 434ACA84245B9BB6000954C5 /* Build configuration list for PBXNativeTarget "VenuesAppTests" */;
+			buildPhases = (
+				434ACA79245B9BB6000954C5 /* Sources */,
+				434ACA7A245B9BB6000954C5 /* Frameworks */,
+				434ACA7B245B9BB6000954C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				434ACA83245B9BB6000954C5 /* PBXTargetDependency */,
+			);
+			name = VenuesAppTests;
+			productName = VenuesAppTests;
+			productReference = 434ACA7D245B9BB6000954C5 /* VenuesAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		476D0D0521FA04F9003BEBBD /* VenuesApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 476D0D1821FA0516003BEBBD /* Build configuration list for PBXNativeTarget "VenuesApp" */;
@@ -128,10 +178,14 @@
 		476D0CFE21FA04F9003BEBBD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1140;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Julio Galeano";
 				TargetAttributes = {
+					434ACA7C245B9BB6000954C5 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 476D0D0521FA04F9003BEBBD;
+					};
 					476D0D0521FA04F9003BEBBD = {
 						CreatedOnToolsVersion = 10.1;
 					};
@@ -151,11 +205,19 @@
 			projectRoot = "";
 			targets = (
 				476D0D0521FA04F9003BEBBD /* VenuesApp */,
+				434ACA7C245B9BB6000954C5 /* VenuesAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		434ACA7B245B9BB6000954C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		476D0D0421FA04F9003BEBBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -217,6 +279,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		434ACA79245B9BB6000954C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				434ACA80245B9BB6000954C5 /* VenuesAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		476D0D0221FA04F9003BEBBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +298,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		434ACA83245B9BB6000954C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 476D0D0521FA04F9003BEBBD /* VenuesApp */;
+			targetProxy = 434ACA82245B9BB6000954C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		476D0D0D21FA04FA003BEBBD /* Main.storyboard */ = {
@@ -249,6 +327,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		434ACA85245B9BB6000954C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VenuesAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.julio.ios.VenuesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VenuesApp.app/VenuesApp";
+			};
+			name = Debug;
+		};
+		434ACA86245B9BB6000954C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = VenuesAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.julio.ios.VenuesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VenuesApp.app/VenuesApp";
+			};
+			name = Release;
+		};
 		476D0D1621FA0516003BEBBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -404,6 +522,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		434ACA84245B9BB6000954C5 /* Build configuration list for PBXNativeTarget "VenuesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				434ACA85245B9BB6000954C5 /* Debug */,
+				434ACA86245B9BB6000954C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		476D0D0121FA04F9003BEBBD /* Build configuration list for PBXProject "VenuesApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
