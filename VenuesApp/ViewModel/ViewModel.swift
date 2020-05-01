@@ -16,4 +16,8 @@ class ViewModel: NSObject {
         }
         return result
     }
+    
+    func sum(value1: Int, value2: Int) -> Int {
+        return value1+value2
+    }
 }
